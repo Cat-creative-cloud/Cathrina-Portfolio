@@ -1699,3 +1699,24 @@ input, select, textarea {
 			border-radius: 50% !important;
 			margin: 0 !important;
 		}
+		.job-title {
+			font-size: 1.8rem;
+			font-weight: 500;
+			margin-bottom: 1rem;
+			color: #555;
+		}
+		
+		.tagline {
+			font-size: 1.25rem;
+			font-style: italic;
+			line-height: 1.7;
+			color: #555;
+			max-width: 750px;
+			margin: 0 auto 2.5rem auto;
+		}
+		
+		.values {
+			font-size: 1rem;
+			letter-spacing: 0.05em;
+			color: #777;
+		}
