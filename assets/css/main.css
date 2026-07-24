@@ -882,7 +882,6 @@ input, select, textarea {
 					}
 
 					ul.actions:not(.fixed) li input[type="submit"],
-					ul.actions:not(.fixed) li input[type="reset"],
 					ul.actions:not(.fixed) li input[type="button"],
 					ul.actions:not(.fixed) li button,
 					ul.actions:not(.fixed) li .button {
@@ -890,7 +889,6 @@ input, select, textarea {
 					}
 
 						ul.actions:not(.fixed) li input[type="submit"].icon:before,
-						ul.actions:not(.fixed) li input[type="reset"].icon:before,
 						ul.actions:not(.fixed) li input[type="button"].icon:before,
 						ul.actions:not(.fixed) li button.icon:before,
 						ul.actions:not(.fixed) li .button.icon:before {
@@ -1007,7 +1005,6 @@ input, select, textarea {
 /* Button */
 
 	input[type="submit"],
-	input[type="reset"],
 	input[type="button"],
 	button,
 	.button {
@@ -1040,7 +1037,6 @@ input, select, textarea {
 	}
 
 		input[type="submit"]:hover,
-		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
@@ -1048,7 +1044,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"]:active,
-		input[type="reset"]:active,
 		input[type="button"]:active,
 		button:active,
 		.button:active {
@@ -1056,7 +1051,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].icon:before,
-		input[type="reset"].icon:before,
 		input[type="button"].icon:before,
 		button.icon:before,
 		.button.icon:before {
@@ -1064,7 +1058,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].fit,
-		input[type="reset"].fit,
 		input[type="button"].fit,
 		button.fit,
 		.button.fit {
@@ -1072,7 +1065,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].small,
-		input[type="reset"].small,
 		input[type="button"].small,
 		button.small,
 		.button.small {
@@ -1082,7 +1074,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].primary,
-		input[type="reset"].primary,
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
@@ -1093,7 +1084,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].primary:hover,
-		input[type="reset"].primary:hover,
 		input[type="button"].primary:hover,
 		button.primary:hover,
 		.button.primary:hover {
@@ -1101,8 +1091,6 @@ input, select, textarea {
 		}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
-		input[type="reset"].disabled,
-		input[type="reset"]:disabled,
 		input[type="button"].disabled,
 		input[type="button"]:disabled,
 		button.disabled,
@@ -1115,7 +1103,6 @@ input, select, textarea {
 		}
 
 	input[type="submit"],
-	input[type="reset"],
 	input[type="button"],
 	button {
 		line-height: calc(2.75rem - 2px);
@@ -1561,12 +1548,18 @@ input, select, textarea {
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			padding: 5rem 4rem 3rem;
 			position: relative;
-			width: 40rem;
+			width: 54rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
-			border-radius: 4px;
+			background: rgba(255, 255, 255, 0.96);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+
+			border: 1px solid rgba(0, 0, 0, 0.06);
+			border-radius: 20px;
+
+			box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
 			opacity: 0;
 		}
 
@@ -1605,17 +1598,17 @@ input, select, textarea {
 					height: 2.5rem;
 					border-radius: 100%;
 					background-position: center;
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23171717%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
 					background-size: 20px 20px;
 					background-repeat: no-repeat;
 				}
 
 				#main article .close:hover:before {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: rgba(23,23,23,0.05);
 				}
 
 				#main article .close:active:before {
-					background-color: rgba(255, 255, 255, 0.175);
+					background-color: rgba(23,23,23,0.1);
 				}
 
 		@media screen and (max-width: 736px) {
@@ -1720,3 +1713,363 @@ input, select, textarea {
 			letter-spacing: 0.05em;
 			color: #777;
 		}
+
+		/* ======================================================
+   PORTFOLIO OVERRIDES
+====================================================== */
+
+:root {
+    --bg: #F7F5F2;
+    --card: #FFFFFF;
+    --text: #171717;
+    --text-light: #666666;
+    --border: #E5E2DD;
+    --shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    --radius: 20px;
+}
+
+/* Article / modal */
+
+#main article {
+    width: 54rem;
+    max-width: 100%;
+    padding: 5rem 4rem 3rem;
+
+    background: rgba(255, 255, 255, 0.96);
+    color: var(--text);
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+/* Article text */
+
+#main article,
+#main article p,
+#main article h2,
+#main article h3 {
+    color: var(--text);
+}
+
+/* About section */
+
+#intro p {
+    line-height: 1.8;
+}
+
+#intro .about-intro {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+#intro h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Close button */
+
+#main article .close:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='20px' viewBox='0 0 20 20'%3E%3Cstyle%3Eline %7B stroke: %23171717%3B stroke-width: 1.5%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+}
+
+#main article .close:hover:before {
+    background-color: rgba(23, 23, 23, 0.05);
+}
+
+#main article .close:active:before {
+    background-color: rgba(23, 23, 23, 0.1);
+}
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+    #main article {
+        padding: 4rem 2rem 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #main article {
+        padding: 3.5rem 1.5rem 1.5rem;
+    }
+}
+/* Contact */
+
+#contact .contact-intro {
+    max-width: 42rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+#contact .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+#contact .contact-links .button {
+    margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+    #contact .contact-links {
+        flex-direction: column;
+    }
+
+    #contact .contact-links .button {
+        width: 100%;
+    }
+}
+/* ======================================================
+   SELECTED WORK CAROUSEL
+====================================================== */
+
+#work {
+    overflow: hidden;
+}
+
+.work-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.section-eyebrow {
+    margin: 0 0 0.4rem;
+    color: var(--text-light);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+#work .work-intro {
+    max-width: 43rem;
+    margin: 0 0 2.5rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* Carousel container */
+
+.project-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Horizontally scrollable track */
+
+.project-track {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 0.25rem 0.15rem 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual project cards */
+
+.project-card {
+    flex: 0 0 18rem;
+    width: 18rem;
+    max-width: 18rem;
+    min-height: 29rem;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(23, 23, 23, 0.04);
+
+    scroll-snap-align: start;
+}
+
+/* Project image area */
+
+.project-visual {
+    width: 100%;
+    height: 10rem;
+    flex: 0 0 10rem;
+
+    overflow: hidden;
+    background: #f5f3ef;
+}
+
+.project-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Use this modifier for screenshots that should not be cropped */
+
+.project-visual-contain {
+    padding: 0.6rem;
+    background: #f7f7f5;
+}
+
+.project-visual-contain img {
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Placeholder for projects without an image */
+
+.project-visual-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+
+    color: rgba(23, 23, 23, 0.5);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Card content */
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 1.35rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+
+    margin-bottom: 1rem;
+}
+
+.project-tags span {
+    display: inline-block;
+    padding: 0.28rem 0.55rem;
+
+    background: #f4f2ee;
+    border-radius: 999px;
+
+    color: #6b655e;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    margin-bottom: 0.7rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+}
+
+.project-card p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+.project-link {
+    margin-top: auto;
+    border-bottom: 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    opacity: 0.65;
+}
+
+/* Carousel controls */
+
+.carousel-controls {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.carousel-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    box-shadow: none;
+
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 2.5rem;
+
+    cursor: pointer;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+    background: #f7f5f2;
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Tablet and mobile */
+
+@media screen and (max-width: 736px) {
+    .work-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-card {
+        flex-basis: 82%;
+        width: 82%;
+        max-width: 82%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-card {
+        flex-basis: 90%;
+        width: 90%;
+        max-width: 90%;
+    }
+}
