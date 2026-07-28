@@ -2073,3 +2073,881 @@ input, select, textarea {
         max-width: 90%;
     }
 }
+.project-category {
+    margin: 0.1rem 0 0.1rem 0 !important;
+    padding: 0 !important;
+
+    font-size: 0.75rem;
+    font-style: italic;
+    font-weight: 400;
+
+    color: #8a8a8a !important;
+
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: none;
+}
+/* ==========================================================
+   LOCAMIGO CASE STUDY
+   Add this block at the end of assets/css/main.css
+========================================================== */
+
+
+/* ----------------------------------------------------------
+   PAGE BASICS
+---------------------------------------------------------- */
+
+body.case-study-page {
+    background: #ffffff;
+    color: #282828;
+}
+
+.case-study-page *,
+.case-study-page *::before,
+.case-study-page *::after {
+    box-sizing: border-box;
+}
+
+.case-study-header,
+.case-study {
+    width: min(74rem, calc(100% - 3rem));
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* ----------------------------------------------------------
+   BACK LINK
+---------------------------------------------------------- */
+
+.case-study-header {
+    padding: 2rem 0;
+}
+
+.case-study-back {
+    border: 0;
+    color: #777777;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: none;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.case-study-back:hover {
+    color: #111111;
+    transform: translateX(-0.2rem);
+}
+
+
+/* ----------------------------------------------------------
+   HERO
+---------------------------------------------------------- */
+
+.case-study-hero {
+    max-width: 58rem;
+    padding: 4rem 0 3rem;
+}
+
+.case-study-eyebrow,
+.case-study-label {
+    margin: 0 0 1rem;
+    color: #e90063;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.case-study-hero h1 {
+    margin: 0 0 1.5rem;
+    color: #222222;
+    font-size: clamp(3.8rem, 9vw, 7rem);
+    font-weight: 600;
+    letter-spacing: -0.055em;
+    line-height: 0.95;
+    text-transform: none;
+}
+
+.case-study-lead {
+    max-width: 48rem;
+    margin: 0;
+    color: #565656;
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    line-height: 1.65;
+}
+
+
+/* ----------------------------------------------------------
+   QUICK FACTS
+---------------------------------------------------------- */
+
+.case-study-facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.case-study-fact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.case-study-fact span {
+    color: #999999;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.case-study-fact strong {
+    color: #292929;
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+/* ----------------------------------------------------------
+   LARGE TEASER IMAGE
+---------------------------------------------------------- */
+
+.case-study-cover {
+    width: 100%;
+    margin: 0 0 7rem;
+}
+
+.case-study-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 48rem;
+    border-radius: 1.75rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ----------------------------------------------------------
+   GENERAL CONTENT SECTIONS
+---------------------------------------------------------- */
+
+.case-study-section {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr);
+    gap: 2.5rem;
+    padding: 0 0 7rem;
+}
+
+.case-study-number {
+    padding-top: 0.4rem;
+    color: #b0b0b0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+}
+
+.case-study-section-content {
+    width: 100%;
+    max-width: 64rem;
+}
+
+.case-study-section-content h2 {
+    max-width: 52rem;
+    margin: 0 0 1.75rem;
+    color: #222222;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 500;
+    letter-spacing: -0.038em;
+    line-height: 1.14;
+    text-transform: none;
+}
+
+.case-study-section-content > p:not(.case-study-label) {
+    max-width: 45rem;
+    margin: 0 0 1.4rem;
+    color: #565656;
+    font-size: 1.06rem;
+    line-height: 1.8;
+}
+
+
+/* ----------------------------------------------------------
+   INTERVIEW QUOTES
+---------------------------------------------------------- */
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.quote-card {
+    padding: 1.75rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 1.25rem;
+    background: #faf9f7;
+}
+
+.quote-card blockquote {
+    margin: 0 0 1.5rem;
+    color: #333333;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.7;
+}
+
+.quote-card footer {
+    color: #858585;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+
+/* ----------------------------------------------------------
+   KEY INSIGHT
+---------------------------------------------------------- */
+
+.case-study-highlight {
+    max-width: 46rem;
+    margin-top: 2.5rem;
+    padding: 2rem 2.2rem;
+    border-left: 3px solid #e90063;
+    border-radius: 0 1rem 1rem 0;
+    background: #fff4f8;
+}
+
+.case-study-highlight p {
+    margin: 0;
+    color: #333333;
+    font-size: 1.18rem;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.insight-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.insight-card {
+    min-height: 10rem;
+    padding: 1.5rem;
+    border: 1px solid #e4e4e4;
+    border-radius: 1.15rem;
+    background: #ffffff;
+}
+
+.insight-card h3 {
+    margin: 0 0 0.7rem;
+    color: #242424;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: none;
+}
+
+.insight-card p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------
+   SOLUTION PILLARS
+---------------------------------------------------------- */
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.solution-card {
+    min-height: 14rem;
+    padding: 1.75rem;
+    border: 1px solid #e7e7e7;
+    border-radius: 1.3rem;
+    background: #fafafa;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1.3rem 3rem rgba(0, 0, 0, 0.07);
+}
+
+.solution-card h3 {
+    margin: 0 0 0.8rem;
+    color: #222222;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: none;
+}
+
+.solution-card p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   PROTOTYPE SHOWCASE
+========================================================== */
+
+.prototype-showcase {
+    display: grid;
+    grid-template-columns: minmax(15rem, 0.75fr) minmax(28rem, 1.45fr);
+    gap: 3.5rem;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 3rem;
+    border: 1px solid #ececec;
+    border-radius: 1.75rem;
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(233, 0, 99, 0.055),
+            transparent 35%
+        ),
+        #fafafa;
+}
+
+
+/* Prototype text column */
+
+.prototype-info {
+    min-width: 0;
+}
+
+.prototype-info > p {
+    margin: 0 0 2.25rem;
+    color: #5e5e5e;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.prototype-flow-title {
+    display: block;
+    margin-bottom: 1.35rem;
+    color: #e90063;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.prototype-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.prototype-step {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.prototype-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #f8dce7;
+    color: #e90063;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.prototype-step-copy strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #252525;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.prototype-step-copy p {
+    margin: 0;
+    color: #686868;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+
+/* Prototype image column */
+
+.prototype-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+}
+
+.prototype-image {
+    display: block;
+    width: 100%;
+    max-width: 46rem;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    filter: drop-shadow(0 1.5rem 1.8rem rgba(0, 0, 0, 0.12));
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.prototype-visual:hover .prototype-image {
+    transform: translateY(-0.45rem) scale(1.01);
+    filter: drop-shadow(0 1.8rem 2rem rgba(0, 0, 0, 0.16));
+}
+
+
+/* Prototype button */
+
+.prototype-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    margin-top: 1.75rem;
+    padding: 0.95rem 1.7rem;
+    border: 1px solid #171717;
+    border-radius: 999px;
+    background: #171717;
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    text-transform: none;
+    box-shadow: none;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.prototype-button:hover {
+    background: #333333;
+    color: #ffffff !important;
+    transform: translateY(-0.15rem);
+    box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.14);
+}
+
+.prototype-button:focus-visible {
+    outline: 3px solid rgba(233, 0, 99, 0.3);
+    outline-offset: 4px;
+}
+
+
+/* ----------------------------------------------------------
+   PRODUCT APPROACH
+---------------------------------------------------------- */
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.approach-card {
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    border-radius: 1.25rem;
+    background: #ffffff;
+}
+
+.approach-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-bottom: 1px solid #ececec;
+}
+
+.approach-card-content {
+    padding: 1.4rem;
+}
+
+.approach-card-content span {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: #e90063;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.approach-card-content h3 {
+    margin: 0 0 0.6rem;
+    color: #252525;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: none;
+}
+
+.approach-card-content p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+
+/* ----------------------------------------------------------
+   OUTCOME
+---------------------------------------------------------- */
+
+.outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.outcome-card {
+    min-height: 10rem;
+    padding: 1.5rem;
+    border-top: 2px solid #e90063;
+    background: #fafafa;
+}
+
+.outcome-card h3 {
+    margin: 0 0 0.65rem;
+    color: #252525;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: none;
+}
+
+.outcome-card p {
+    margin: 0;
+    color: #696969;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+/* Optional numeric outcomes */
+
+.case-study-outcomes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 48rem;
+    margin-top: 2.5rem;
+}
+
+.case-study-outcomes div {
+    padding: 1.5rem 0;
+    border-top: 1px solid #d8d8d8;
+}
+
+.case-study-outcomes strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #222222;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.case-study-outcomes span {
+    color: #777777;
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+
+/* ----------------------------------------------------------
+   REFLECTION
+---------------------------------------------------------- */
+
+.reflection-block {
+    max-width: 58rem;
+    padding: 4rem;
+    border-radius: 1.75rem;
+    background: #171717;
+}
+
+.reflection-block h2 {
+    max-width: 48rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.reflection-block p {
+    max-width: 44rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.reflection-block .case-study-label {
+    color: #ff5c9f;
+}
+
+
+/* ----------------------------------------------------------
+   NEXT PROJECT
+---------------------------------------------------------- */
+
+.case-study-next {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    margin-top: 1rem;
+    padding: 3.5rem 0 6rem;
+    border-top: 1px solid #dddddd;
+}
+
+.case-study-next span {
+    color: #999999;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.case-study-next a {
+    border: 0;
+    color: #222222;
+    font-size: clamp(1.7rem, 4vw, 2.7rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+    text-decoration: none;
+    text-transform: none;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.case-study-next a:hover {
+    color: #e90063;
+    transform: translateX(0.3rem);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media screen and (max-width: 980px) {
+
+    .case-study-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .quote-grid,
+    .solution-grid,
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insight-grid,
+    .outcome-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .prototype-showcase {
+        grid-template-columns: minmax(13rem, 0.8fr) minmax(22rem, 1.2fr);
+        gap: 2rem;
+        padding: 2.25rem;
+    }
+
+    .prototype-image {
+        max-width: 37rem;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media screen and (max-width: 736px) {
+
+    .case-study-header,
+    .case-study {
+        width: min(100% - 2rem, 74rem);
+    }
+
+    .case-study-header {
+        padding: 1.25rem 0;
+    }
+
+    .case-study-hero {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .case-study-hero h1 {
+        font-size: clamp(3rem, 17vw, 5rem);
+    }
+
+    .case-study-lead {
+        font-size: 1.1rem;
+    }
+
+    .case-study-facts {
+        gap: 1.5rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .case-study-cover {
+        margin-bottom: 4.5rem;
+    }
+
+    .case-study-cover img {
+        border-radius: 1rem;
+    }
+
+    .case-study-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .case-study-number {
+        padding: 0;
+    }
+
+    .case-study-section-content h2 {
+        font-size: 2rem;
+    }
+
+    .case-study-section-content > p:not(.case-study-label) {
+        font-size: 1rem;
+    }
+
+    .quote-grid,
+    .insight-grid,
+    .solution-grid,
+    .approach-grid,
+    .outcome-grid,
+    .case-study-outcomes {
+        grid-template-columns: 1fr;
+    }
+
+    .prototype-showcase {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-top: 2rem;
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .prototype-info > p {
+        margin-bottom: 1.75rem;
+    }
+
+    .prototype-image {
+        width: 115%;
+        max-width: none;
+        margin-left: -7.5%;
+    }
+
+    .prototype-button {
+        width: 100%;
+        margin-top: 1.25rem;
+    }
+
+    .reflection-block {
+        padding: 2.25rem 1.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .case-study-next {
+        padding-bottom: 4rem;
+    }
+}
+
+
+/* ==========================================================
+   VERY SMALL SCREENS
+========================================================== */
+
+@media screen and (max-width: 480px) {
+
+    .case-study-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-hero h1 {
+        font-size: 3.25rem;
+    }
+
+    .prototype-showcase {
+        padding: 1.25rem;
+    }
+
+    .prototype-step {
+        grid-template-columns: 2.6rem minmax(0, 1fr);
+    }
+
+    .prototype-step-number {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .case-study-back,
+    .solution-card,
+    .prototype-image,
+    .prototype-button,
+    .case-study-next a {
+        transition: none;
+    }
+
+    .prototype-visual:hover .prototype-image,
+    .solution-card:hover,
+    .prototype-button:hover,
+    .case-study-next a:hover {
+        transform: none;
+    }
+}
