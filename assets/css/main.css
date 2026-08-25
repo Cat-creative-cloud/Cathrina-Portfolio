@@ -2513,6 +2513,30 @@ input, select, textarea {
     text-transform: none;
 }
 /* ==========================================================
+   Projects: warmer Hintergrund wie About
+========================================================== */
+
+#main > article#work {
+    background:
+        radial-gradient(
+            circle at 92% 8%,
+            rgba(233, 135, 114, 0.1),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 8% 92%,
+            rgba(49, 111, 104, 0.08),
+            transparent 28%
+        ),
+        #fbf8f3 !important;
+}
+
+/* Die Projektkarten bleiben bewusst weiß:
+   Sie heben sich damit ruhig vom cremefarbenen Panel ab. */
+#work .project-card {
+    background: #ffffff;
+}
+/* ==========================================================
    LOCAMIGO CASE STUDY
    Add this block at the end of assets/css/main.css
 ========================================================== */
@@ -3429,7 +3453,84 @@ body.case-study-page {
     object-fit: cover;
     box-shadow: 0 1rem 2.6rem rgba(22, 22, 22, 0.07);
 }
+/* LocAmigo: Unsicherheit entlang der Shopping Journey */
 
+.shopping-journey {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 3.5rem;
+    border-top: 1px solid rgba(36, 51, 48, 0.2);
+}
+
+.shopping-journey-step {
+    position: relative;
+    padding: 1.7rem 1.5rem 0 0;
+}
+
+.shopping-journey-step::before {
+    position: absolute;
+    top: -0.42rem;
+    left: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 3px solid #e4efec;
+    border-radius: 50%;
+    background: #316f68;
+    content: "";
+}
+
+.shopping-journey-step + .shopping-journey-step {
+    padding-left: 1.5rem;
+}
+
+.shopping-journey-step + .shopping-journey-step::before {
+    left: 1.5rem;
+}
+
+.shopping-journey-step span {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: #e98772;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.shopping-journey-step strong {
+    display: block;
+    color: #243330;
+    font-size: 1rem;
+}
+
+.shopping-journey-step p {
+    max-width: 15rem;
+    margin: 0.45rem 0 0;
+    color: #6e7875;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+@media screen and (max-width: 736px) {
+    .shopping-journey {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-left: 1.5rem;
+        border-top: 0;
+        border-left: 1px solid rgba(36, 51, 48, 0.2);
+    }
+
+    .shopping-journey-step,
+    .shopping-journey-step + .shopping-journey-step {
+        padding: 0 0 0 1.5rem;
+    }
+
+    .shopping-journey-step::before,
+    .shopping-journey-step + .shopping-journey-step::before {
+        top: 0.35rem;
+        left: -0.42rem;
+    }
+}
 
 /* ==========================================================
    TABLET
@@ -7440,29 +7541,35 @@ body.experience-page {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+
+    margin-top: 4rem;
     padding: 3.5rem 0 6rem;
-    border-top: 1px solid var(--exp-line);
+
+    border-top: 1px solid #d9d9d9;
 }
 
 .experience-footer a {
     border: 0;
-    color: var(--exp-petrol);
+
+    color: #2f6f73;
+
     font-size: clamp(1.25rem, 3vw, 2rem);
     font-weight: 500;
     letter-spacing: -0.025em;
     line-height: 1.3;
+
     text-decoration: none;
     text-transform: none;
+
     transition:
         color 0.2s ease,
         transform 0.2s ease;
 }
 
 .experience-footer a:hover {
-    color: var(--exp-coral);
+    color: #e98772;
     transform: translateX(0.25rem);
 }
-
 
 /* ==========================================================
    TABLET
@@ -7896,7 +8003,7 @@ body:not(.experience-page) #contact .contact-modal {
     }
 }
 /* ==========================================================
-   Startseite: mittig, lesbar und ohne Scrollen
+   Startseite: mittig und gut lesbar
 ========================================================== */
 
 @media screen and (min-width: 737px) {
@@ -7910,49 +8017,45 @@ body:not(.experience-page) #contact .contact-modal {
         align-items: center;
         justify-content: center;
 
-        width: min(100% - 3rem, 60rem);
+        width: min(100% - 3rem, 52rem);
         max-width: none;
         margin: auto;
         text-align: center;
-        transform: scale(var(--home-scale, 1.5)) !important;
-        transform-origin: center center;
+        transform: none !important;
     }
 
     body:not(.is-article-visible) #header .logo {
-        width: 8rem !important;
-        height: 8rem !important;
+        width: 6rem !important;
+        height: 6rem !important;
     }
 
     body:not(.is-article-visible) #header .content .inner {
-        padding: 2rem 1.5rem 1rem;
+        padding: 1.5rem 1rem 0.75rem;
     }
 
     body:not(.is-article-visible) #header .content h1 {
-        font-size: clamp(3.5rem, 5vw, 5rem);
-    }
-
-    body:not(.is-article-visible) #header .content p {
-        font-size: 1.35rem;
+        font-size: clamp(2.8rem, 4vw, 3.7rem);
     }
 
     body:not(.is-article-visible) #header .job-title {
-        font-size: 2.1rem;
-    }
-
-    body:not(.is-article-visible) #header .tagline {
-        max-width: 48rem;
         font-size: 1.45rem;
     }
 
+    body:not(.is-article-visible) #header .tagline {
+        max-width: 38rem;
+        margin-bottom: 1.75rem;
+        font-size: 1.05rem;
+    }
+
     body:not(.is-article-visible) #header .values {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     body:not(.is-article-visible) #header nav ul li a {
-        height: 3.5rem;
-        padding: 0 1.65rem;
-        font-size: 1rem;
-        line-height: 3.5rem;
+        height: 2.5rem;
+        padding: 0 1.15rem;
+        font-size: 0.85rem;
+        line-height: 2.5rem;
     }
 }
 /* Startseite auf kleineren Desktop-Displays etwas kompakter */
@@ -7966,4 +8069,218 @@ body:not(.experience-page) #contact .contact-modal {
     body:not(.is-article-visible) #header {
         --home-scale: 1.15;
     }
+}
+/* ==========================================================
+   Projects: Carousel-Pfeile seitlich mittig
+========================================================== */
+
+#work .project-carousel {
+    overflow: visible;
+}
+
+#work .carousel-controls {
+    position: static;
+    margin: 0;
+}
+
+#work .carousel-arrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#work .carousel-arrow:first-child {
+    left: -1.35rem;
+}
+
+#work .carousel-arrow:last-child {
+    right: -1.35rem;
+}
+
+/* Auf kleineren Bildschirmen bleiben die Pfeile bequem darunter */
+@media screen and (max-width: 736px) {
+    #work .project-carousel {
+        overflow: hidden;
+    }
+
+    #work .carousel-controls {
+        position: static;
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    #work .carousel-arrow {
+        position: static;
+        transform: none;
+    }
+}/* Ganze Projektkarte als Link erkennbar machen */
+#work .project-card[data-href] {
+    cursor: pointer !important;
+}
+
+#work .project-card[data-href]:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 1.2rem 2.8rem rgba(36, 51, 48, 0.12);
+}
+
+#work .project-card[data-href]:focus-visible {
+    outline: 3px solid rgba(49, 111, 104, 0.35);
+    outline-offset: 4px;
+}
+/* ==========================================================
+   LocAmigo: Shopping-Journey – eigener visueller Akzent
+========================================================== */
+
+.shopping-journey-wrap {
+    margin-top: 5rem;
+    padding: 2rem 2.25rem 2.4rem;
+    border: 1px solid rgba(238, 0, 106, 0.16);
+    border-radius: 1.25rem;
+    background:
+        radial-gradient(
+            circle at 94% 10%,
+            rgba(255, 222, 0, 0.22),
+            transparent 24%
+        ),
+        #fff8fb;
+}
+
+.shopping-journey-heading > p {
+    color: #ec0067;
+}
+
+.shopping-journey-heading > div {
+    color: #6f5b63;
+}
+
+.shopping-journey-heading strong {
+    color: #ec0067;
+}
+
+.shopping-journey {
+    border-top-color: rgba(236, 0, 103, 0.28);
+}
+
+.shopping-journey-step::before {
+    border-color: #fff8fb;
+    background: #ec0067;
+    box-shadow: 0 0 0 2px rgba(255, 222, 0, 0.75);
+}
+
+.shopping-journey-step span {
+    color: #ec0067;
+}
+
+.shopping-journey-step strong {
+    color: #2d1720;
+}
+
+.shopping-journey-step p {
+    color: #6f5b63;
+}
+
+@media screen and (max-width: 736px) {
+    .shopping-journey-wrap {
+        margin-top: 3.5rem;
+        padding: 1.5rem;
+    }
+
+    .shopping-journey {
+        border-left-color: rgba(236, 0, 103, 0.28);
+    }
+}
+.problem-card {
+    border: 1px solid #EAECF0;
+    border-top: 3px solid #101828;
+    background: #FFFFFF;
+}
+
+.problem-card:nth-child(1) {
+    border-top-color: #101828;
+}
+
+.problem-card:nth-child(2) {
+    border-top-color: #FFB703;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 183, 3, 0.035) 0%,
+        #FFFFFF 45%
+    );
+}
+
+.problem-card:nth-child(3) {
+    border-top-color: #D9F000;
+    background: linear-gradient(
+        180deg,
+        rgba(217, 240, 0, 0.045) 0%,
+        #FFFFFF 45%
+    );
+}
+
+.problem-card:nth-child(4) {
+    border-top-color: #FF006E;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 0, 110, 0.035) 0%,
+        #FFFFFF 45%
+    );
+}
+/* =========================================
+   INSIGHT CARDS · LOCAMIGO
+========================================= */
+
+.insight-card {
+    border: 1px solid #EAECF0;
+    border-top: 3px solid #101828;
+    background: #FFFFFF;
+}
+
+/* Availability */
+.insight-card:nth-child(1) {
+    border-top-color: #101828;
+}
+
+/* Alternatives */
+.insight-card:nth-child(2) {
+    border-top-color: #FFB703;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 183, 3, 0.035) 0%,
+        #FFFFFF 45%
+    );
+}
+
+/* Stores */
+.insight-card:nth-child(3) {
+    border-top-color: #D9F000;
+    background: linear-gradient(
+        180deg,
+        rgba(217, 240, 0, 0.045) 0%,
+        #FFFFFF 45%
+    );
+}
+
+/* Labels */
+.insight-card:nth-child(4) {
+    border-top-color: #FF006E;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 0, 110, 0.035) 0%,
+        #FFFFFF 45%
+    );
+}
+/* =========================================
+   MARKET OPPORTUNITY IMAGE
+========================================= */
+
+.locamigo-business-visual .case-study-section-content {
+    min-width: 0;
+}
+
+.locamigo-business-visual img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
