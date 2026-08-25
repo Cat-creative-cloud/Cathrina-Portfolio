@@ -1116,6 +1116,7 @@ input, select, textarea {
 		-ms-transform: scale(1.0);
 		transform: scale(1.0);
 		-webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -1571,7 +1572,8 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-			#main article .close {
+			#main article .close,
+            .experience-main .close {
 				display: block;
 				position: absolute;
 				top: 0;
@@ -1584,7 +1586,8 @@ input, select, textarea {
 				white-space: nowrap;
 			}
 
-				#main article .close:before {
+				#main article .close:before,
+                .experience-main .close:before {
 					-moz-transition: background-color 0.2s ease-in-out;
 					-webkit-transition: background-color 0.2s ease-in-out;
 					-ms-transition: background-color 0.2s ease-in-out;
@@ -1603,11 +1606,13 @@ input, select, textarea {
 					background-repeat: no-repeat;
 				}
 
-				#main article .close:hover:before {
+				#main article .close:hover:before,
+                .experience-main .close:hover:before {
 					background-color: rgba(23,23,23,0.05);
 				}
 
-				#main article .close:active:before {
+				#main article .close:active:before,
+                .experience-main .close:active:before {
 					background-color: rgba(23,23,23,0.1);
 				}
 
@@ -2096,7 +2101,9 @@ input, select, textarea {
 
     text-transform: none;
 }
-
+.about-why-heading h2 span {
+    color: var(--about-petrol) !important;
+}
 .about-why-copy p {
     max-width: 46rem;
 
@@ -6752,7 +6759,7 @@ body.experience-page {
 .experience-header,
 .experience-main {
     width: min(78rem, calc(100% - 6rem));
-}
+    }
 
 /* Der Header bekommt etwas mehr Luft innerhalb der Karte */
 .experience-header {
@@ -6797,6 +6804,7 @@ body.experience-page {
     }
 }
 .experience-shell {
+    position: relative;
     overflow: hidden;
 }
 /* ----------------------------------------------------------
@@ -6887,7 +6895,7 @@ body.experience-page {
 .experience-hero {
     position: relative;
     overflow: hidden;
-    padding: clamp(4rem, 9vw, 7.5rem) 0 clamp(4rem, 8vw, 6.5rem);
+    padding: 5rem 0 clamp(4rem, 8vw, 6.5rem);
 }
 
 .experience-hero::before {
